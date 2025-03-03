@@ -1,0 +1,611 @@
+[
+    {
+        "name": "Weizenmehl",
+        "description": "Type 405, ideal für Kuchen und Gebäck",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "120g",
+            "1 EL": "7.5g"
+        }
+    },
+    {
+        "name": "Vollkornmehl",
+        "description": "Grob gemahlenes Mehl aus Weizenkörnern",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "110g",
+            "1 EL": "6.8g"
+        }
+    },
+    {
+        "name": "Kartoffeln",
+        "description": "Frische Speisekartoffeln",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "200g"
+        }
+    },
+    {
+        "name": "Jasminreis",
+        "description": "Langkörniger, aromatischer Reis",
+        "units": [
+            "g",
+            "kg",
+            "Tasse"
+        ],
+        "conversion_table": {
+            "1 Tasse": "185g"
+        }
+    },
+    {
+        "name": "Basmatireis",
+        "description": "Aromatischer, indischer Reis",
+        "units": [
+            "g",
+            "kg",
+            "Tasse"
+        ],
+        "conversion_table": {
+            "1 Tasse": "190g"
+        }
+    },
+    {
+        "name": "Spaghetti",
+        "description": "Klassische lange Nudeln",
+        "units": [
+            "g",
+            "kg",
+            "Portion"
+        ],
+        "conversion_table": {
+            "1 Portion": "100g"
+        }
+    },
+    {
+        "name": "Penne",
+        "description": "Hohle Röhrennudeln",
+        "units": [
+            "g",
+            "kg",
+            "Portion"
+        ],
+        "conversion_table": {
+            "1 Portion": "100g"
+        }
+    },
+    {
+        "name": "Fusilli",
+        "description": "Gedrehte Nudeln",
+        "units": [
+            "g",
+            "kg",
+            "Portion"
+        ],
+        "conversion_table": {
+            "1 Portion": "100g"
+        }
+    },
+    {
+        "name": "Linguine",
+        "description": "Flache, dünne Nudeln",
+        "units": [
+            "g",
+            "kg",
+            "Portion"
+        ],
+        "conversion_table": {
+            "1 Portion": "100g"
+        }
+    },
+    {
+        "name": "Lasagneplatten",
+        "description": "Flache Nudeln für Lasagne",
+        "units": [
+            "g",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "25g"
+        }
+    },
+    {
+        "name": "Vollmilch",
+        "description": "3.5% Fett, frische Milch",
+        "units": [
+            "ml",
+            "l",
+            "Tasse"
+        ],
+        "conversion_table": {
+            "1 Tasse": "240ml",
+            "1 EL": "15ml"
+        }
+    },
+    {
+        "name": "Mandelmilch",
+        "description": "Pflanzliche Milchalternative aus Mandeln",
+        "units": [
+            "ml",
+            "l",
+            "Tasse"
+        ],
+        "conversion_table": {
+            "1 Tasse": "240ml",
+            "1 EL": "15ml"
+        }
+    },
+    {
+        "name": "Sojamilch",
+        "description": "Pflanzliche Milchalternative aus Sojabohnen",
+        "units": [
+            "ml",
+            "l",
+            "Tasse"
+        ],
+        "conversion_table": {
+            "1 Tasse": "240ml",
+            "1 EL": "15ml"
+        }
+    },
+    {
+        "name": "Mozzarella",
+        "description": "Frischer, weicher Käse",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "125g"
+        }
+    },
+    {
+        "name": "Feta",
+        "description": "Griechischer Schafskäse",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Portion": "50g"
+        }
+    },
+    {
+        "name": "Tomaten",
+        "description": "Frische, rote Tomaten",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "150g"
+        }
+    },
+    {
+        "name": "Gurke",
+        "description": "Frische Salatgurke",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "300g"
+        }
+    },
+    {
+        "name": "Paprika",
+        "description": "Bunte, frische Paprika",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "150g"
+        }
+    },
+    {
+        "name": "Zucchini",
+        "description": "Frische Zucchini",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "200g"
+        }
+    },
+    {
+        "name": "Karotten",
+        "description": "Frische, knackige Karotten",
+        "units": [
+            "g",
+            "kg",
+            "Stück"
+        ],
+        "conversion_table": {
+            "1 Stück": "80g"
+        }
+    },
+    {
+        "name": "Haferflocken",
+        "description": "Ein typisches Beispiel für Staples",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Roggenmehl",
+        "description": "Ein typisches Beispiel für Staples",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Couscous",
+        "description": "Ein typisches Beispiel für Staples",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Quinoa",
+        "description": "Ein typisches Beispiel für Staples",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Farfalle",
+        "description": "Ein typisches Beispiel für Pasta",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Tagliatelle",
+        "description": "Ein typisches Beispiel für Pasta",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Rigatoni",
+        "description": "Ein typisches Beispiel für Pasta",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Maccheroni",
+        "description": "Ein typisches Beispiel für Pasta",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Frischkäse",
+        "description": "Ein typisches Beispiel für Dairy",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Griechischer Joghurt",
+        "description": "Ein typisches Beispiel für Dairy",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Schlagsahne",
+        "description": "Ein typisches Beispiel für Dairy",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Aubergine",
+        "description": "Ein typisches Beispiel für Vegetables",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Stück": "100g"
+        }
+    },
+    {
+        "name": "Lauch",
+        "description": "Ein typisches Beispiel für Vegetables",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Stück": "100g"
+        }
+    },
+    {
+        "name": "Zwiebeln",
+        "description": "Ein typisches Beispiel für Vegetables",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Stück": "100g"
+        }
+    },
+    {
+        "name": "Knoblauch",
+        "description": "Ein typisches Beispiel für Vegetables",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Stück": "100g"
+        }
+    },
+    {
+        "name": "Äpfel",
+        "description": "Ein typisches Beispiel für Fruits",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Bananen",
+        "description": "Ein typisches Beispiel für Fruits",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Zitronen",
+        "description": "Ein typisches Beispiel für Fruits",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Erdbeeren",
+        "description": "Ein typisches Beispiel für Fruits",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Hähnchenbrust",
+        "description": "Ein typisches Beispiel für Meat",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Rinderhack",
+        "description": "Ein typisches Beispiel für Meat",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Lachsfilet",
+        "description": "Ein typisches Beispiel für Meat",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Schweinefilet",
+        "description": "Ein typisches Beispiel für Meat",
+        "units": [
+            "g",
+            "kg"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Kichererbsen",
+        "description": "Ein typisches Beispiel für Canned",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Rote Bohnen",
+        "description": "Ein typisches Beispiel für Canned",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Mais",
+        "description": "Ein typisches Beispiel für Canned",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Tomatenmark",
+        "description": "Ein typisches Beispiel für Canned",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Basilikum",
+        "description": "Ein typisches Beispiel für Herbs & Spices",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Petersilie",
+        "description": "Ein typisches Beispiel für Herbs & Spices",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Chilipulver",
+        "description": "Ein typisches Beispiel für Herbs & Spices",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    },
+    {
+        "name": "Oregano",
+        "description": "Ein typisches Beispiel für Herbs & Spices",
+        "units": [
+            "ml",
+            "l"
+        ],
+        "conversion_table": {
+            "1 Tasse": "200g",
+            "1 EL": "15g"
+        }
+    }
+]
