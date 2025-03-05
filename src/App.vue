@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MealPlanner from './MealPlanner.vue'
+import MealPlanner from './pages/MealPlanner.vue';
 
 export default {
   name: 'App',

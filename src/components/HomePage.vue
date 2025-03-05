@@ -44,7 +44,7 @@
   ];
 
   const redirectToCreateRecipe = () => {
-    router.push('/create-edit-recipe');
+    router.push('/create-recipe');
   };
 
   const redirectToShoppingList = () => {
