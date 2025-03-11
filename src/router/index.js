@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/components/HomePage.vue';
 import CreateEditRecipe from '@/pages/CreateEditRecipePage.vue';
+import RecipeDetail from '@/components/RecipeDetailComponent.vue';
 import RecipesPage from '@/pages/RecipesPage.vue';
 import MealPlanPage from '@/components/MealPlanPage.vue';
 import ShoppingListPage from '@/components/ShoppingListPage.vue';
@@ -21,11 +22,16 @@ const routes = [
     name: 'create-recipe', 
     component: CreateEditRecipe,
     meta: { isTab: true, tabName: 'Rezept erstellen' }},
-  { path: '/recipe/:id', 
-    name: 'recipe-detail', 
+  { path: '/edit-recipe/:id', 
+    name: 'edit-recipe', 
     component: CreateEditRecipe, 
     props: true,
-    meta: { isTab: false, tabName: 'Rezept berabeiten' }},
+    meta: { isTab: false, tabName: 'Rezept bearbeiten' }},
+  { path: '/recipe/:id', 
+    name: 'recipe-detail', 
+    component: RecipeDetail, 
+    props: true,
+    meta: { isTab: false, tabName: 'Rezept anzeigen' }},
   { path: '/recipes', 
     name: 'recipes', 
     component: RecipesPage,

@@ -1,17 +1,25 @@
 <template>
-  <div class="bg-white rounded-3xl shadow-lg p-8">
+  <div>
+    <GoBackArrowComponent />
+    <div class="bg-white rounded-3xl shadow-lg p-8">
+    
     <h2 class="text-3xl font-bold text-indigo-600 mb-6">{{ isEditing ? 'Rezept bearbeiten' : 'Neues Rezept erstellen' }}</h2>
 
+    
     <RecipeFormComponent :recipe="recipe" :isEditing="isEditing" @save="saveRecipe" @cancel="cancel"
       @delete="deleteRecipe" />
 
 
+    </div>
   </div>
+  
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import RecipeFormComponent from '../components/RecipeFormComponent.vue';
+import GoBackArrowComponent from '@/components/GoBackArrowComponent.vue';
+
 import { recipeService } from '@/services/RecipeService'; 
 import { useRouter } from 'vue-router';
 
@@ -53,29 +61,29 @@ onMounted(async () => {
   }
 });
 
-onMounted(async () => {
-  if (isEditing.value) {
-    try {
-      const recipeData = await recipeService.getRecipeById(props.id);
-      console.log('Rezeptdaten:', recipeData);
+// onMounted(async () => {
+//   if (isEditing.value) {
+//     try {
+//       const recipeData = await recipeService.getRecipeById(props.id);
+//       console.log('Rezeptdaten:', recipeData);
 
-      recipe.value = recipeData;  // Jetzt setzen wir das richtige Objekt
-    } catch (error) {
-      console.log('Error fetching recipe:', error);
-    }
-  } else {
-    // Neues Rezept mit Standardwerten initialisieren
-    recipe.value = {
-      user_id: 'test',
-      name: '',
-      description: '',
-      image: "",
-      ingredients: [],
-      meal_type: '',
-      steps: []
-    };
-  }
-});
+//       recipe.value = recipeData;  // Jetzt setzen wir das richtige Objekt
+//     } catch (error) {
+//       console.log('Error fetching recipe:', error);
+//     }
+//   } else {
+//     // Neues Rezept mit Standardwerten initialisieren
+//     recipe.value = {
+//       user_id: 'test',
+//       name: '',
+//       description: '',
+//       image: "",
+//       ingredients: [],
+//       meal_type: '',
+//       steps: []
+//     };
+//   }
+// });
 
 const saveRecipe = async (updatedRecipe) => {
   if (isEditing.value) {

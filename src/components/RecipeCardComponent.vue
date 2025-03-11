@@ -10,20 +10,37 @@
         class="px-4 py-2 bg-gradient-to-r from-pink-400 to-red-400 text-white rounded-full font-semibold hover:from-pink-500 hover:to-red-500 transition-all duration-300 ease-in-out">
         Details
       </RouterLink>
+      <EditButtonCompoment 
+          position="absolute" 
+          placement="top-right" 
+          size="small" 
+          variant="secondary" 
+          :itemId="recipe.id" 
+          @edit="editRecipe"
+        />
     </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
-  recipe: Object
-});
+  import { useRouter } from 'vue-router';
+  import EditButtonCompoment from './EditButtonCompoment.vue';
 
-const PB_BASE_URL = "http://192.168.1.25:8080";
+  const router = useRouter();
 
-const getImageURL = (recipe) => {
-  return recipe.image
-    ? `${PB_BASE_URL}/api/files/recipes/${recipe.id}/${recipe.image}`
-    : "https://placehold.co/400"; // Fallback-Bild
+  defineProps({
+    recipe: Object
+  });
+
+  const PB_BASE_URL = "http://192.168.1.25:8080";
+
+  const getImageURL = (recipe) => {
+    return recipe.image
+      ? `${PB_BASE_URL}/api/files/recipes/${recipe.id}/${recipe.image}`
+      : "https://placehold.co/400"; // Fallback-Bild
+  };
+
+  const editRecipe = (id) => {
+    router.push({ name: 'edit-recipe', params: { id } });
 };
 </script>

@@ -5,6 +5,8 @@
     <TopBarNavigation />
     <!-- Main Content -->
     <div class="container mx-auto px-4 py-24">
+
+
       <router-view />
     </div>
   </div>
@@ -32,6 +34,7 @@ let isLoggedIn = computed(() => {
   return true;
   // return localStorage.getItem('isLoggedIn') === 'true';
 });
+
 
 
 

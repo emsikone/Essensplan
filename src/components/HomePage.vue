@@ -20,6 +20,10 @@
           <button @click="redirectToShoppingList" class="w-full py-4 bg-gradient-to-r from-green-400 to-blue-400 text-white rounded-full font-semibold text-lg hover:from-green-500 hover:to-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
             Einkaufsliste anzeigen
           </button>
+
+          <button @click="redirectToShoppingList" class="w-full py-4 bg-gradient-to-r from-red-400 to-yellow-500 text-white rounded-full font-semibold text-lg hover:from-green-500 hover:to-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
+            Zu den Rezepten
+          </button>
         </div>
       </div>
     </div>
