@@ -3,8 +3,8 @@
     <GoBackArrowComponent />
     <div class="bg-white rounded-3xl shadow-lg p-8">
     
-    <h2 class="text-3xl font-bold text-indigo-600 mb-6">{{ isEditing ? 'Rezept bearbeiten' : 'Neues Rezept erstellen' }}</h2>
-
+    <h2 class="text-3xl font-bold text-indigo-600 mb-4">{{ isEditing ? 'Rezept bearbeiten' : 'Neues Rezept erstellen' }}</h2>
+      <h3 class="text-2xl mb-4"> {{ recipe.name }}</h3>
     
     <RecipeFormComponent :recipe="recipe" :isEditing="isEditing" @save="saveRecipe" @cancel="cancel"
       @delete="deleteRecipe" />

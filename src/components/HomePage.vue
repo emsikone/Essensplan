@@ -14,16 +14,21 @@
         </div>
         
         <div class="space-y-4">
-          <button @click="redirectToCreateRecipe" class="w-full py-4 bg-gradient-to-r from-pink-400 to-red-400 text-white rounded-full font-semibold text-lg hover:from-pink-500 hover:to-red-500 transition-all duration-300 ease-in-out transform hover:scale-105">
+          <button @click="redirectToCreateRecipe" class="w-full py-4 bg-gradient-to-r from-pink-400 to-red-400 text-white rounded-full font-semibold text-lg hover:from-pink-500 hover:to-red-500 transition-all duration-300 ease-in-out transform hover:scale-105 drop-shadow-md">
             Neues Rezept erstellen
           </button>
-          <button @click="redirectToShoppingList" class="w-full py-4 bg-gradient-to-r from-green-400 to-blue-400 text-white rounded-full font-semibold text-lg hover:from-green-500 hover:to-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
+
+          <button @click="redirectToShoppingList" class="w-full py-4 bg-gradient-to-r from-green-400 to-blue-400 text-white rounded-full font-semibold text-lg hover:from-green-500 hover:to-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105 drop-shadow-md">
             Einkaufsliste anzeigen
           </button>
 
-          <button @click="redirectToShoppingList" class="w-full py-4 bg-gradient-to-r from-red-400 to-yellow-500 text-white rounded-full font-semibold text-lg hover:from-green-500 hover:to-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
+          
+          <button @click="redirectToRecipeList" class="w-full py-4 bg-gradient-to-r from-teal-300 to-purple-400 text-white rounded-full font-semibold text-lg hover:from-teal-400 hover:to-purple-500 transition-all duration-300 ease-in-out transform hover:scale-105 drop-shadow-md">
             Zu den Rezepten
           </button>
+          
+
+          
         </div>
       </div>
     </div>
@@ -53,6 +58,9 @@
 
   const redirectToShoppingList = () => {
     router.push('/shopping-list');
+  };
+  const redirectToRecipeList = () => {
+    router.push('/recipes');
   };
 
   </script>

@@ -1,34 +1,20 @@
 <template>
-<div>
+  <div>
     <h3 class="text-lg font-semibold text-indigo-600 mb-2">Zutaten</h3>
     <ul class="space-y-2">
       <li v-for="(ingredient, index) in localIngredients" :key="index" class="flex items-center space-x-2">
 
-        <!-- <input type="text" v-model="ingredient.name" placeholder="Zutat"
-          class="flex-grow px-4 py-2 rounded-full border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"> -->
-        <select v-model="ingredient.id" @change="fetchUnits(ingredient)" @click="logging"
-          class="w-1/2 flex-grow px-4 py-2 rounded-full border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+        <ComboBoxComponent />
 
-          <option v-for="ingredientOption in ingredientOptions" :key="ingredientOption.id" :value="ingredientOption.id">{{
-            ingredientOption.name }}</option>
-        </select>
-
-
-        <input type="text" v-model="ingredient.amount" placeholder="Menge"
+        <input type="text" v-model="ingredient.amount" placeholder="Menge" :disabled="!ingredient.id"
           class="w-2/6 px-4 py-2 rounded-full border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
         <label for="unit" class="sr-only">Einheit</label>
-
-        <select v-model="ingredient.unit"
+        <select v-model="ingredient.unit" :disabled="!ingredient.id"
           class="w-1/6 flex-grow px-4 py-2 rounded-full border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
           <option v-for="unit in ingredient.units" :key="unit.id" :value="unit">{{ unit }}</option>
         </select>
-
-
-
-
         <button @click="removeIngredient(index)" type="button" class="text-red-500 hover:text-red-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -42,12 +28,9 @@
 </template>
 
 <script setup>
-
-import { onMounted , ref, watch } from 'vue';
-
-// Importiere RecipeService
+import { onMounted, ref, watch } from 'vue';
 import { ingredientService } from '@/services/IngredientService';
-
+import ComboBoxComponent from './ComboBoxComponent.vue';
 
 const props = defineProps({
   ingredients: Array
@@ -55,6 +38,7 @@ const props = defineProps({
 const emit = defineEmits(['update']);
 
 let ingredientOptions = ref([]);
+const query = ref('');
 
 // Lokale Kopie von props.ingredients
 const localIngredients = ref([...props.ingredients]);
@@ -67,36 +51,26 @@ const fetchIngredients = async () => {
   }
 };
 
-
 const addIngredient = () => {
   const newIngredient = { id: null, amount: '', units: [], unit: null };
-  console.log('vor Push');
-  
   localIngredients.value.push(newIngredient);
-  console.log('nach Push');
-  // Emitte die neue Zutatenliste an den Parent
-   emit('update', localIngredients.value);  // Oder props.ingredients falls du die übergebenen Props synchronisieren möchtest
+  emit('update', localIngredients.value);
 };
-
 
 const removeIngredient = (index) => {
   localIngredients.value.splice(index, 1);
   emit('update', localIngredients.value);
 };
 
-
-
 const fetchUnits = async (ingredient) => {
+  console.log(fetchUnits);
+  
   if (!ingredient.id) return;
-
   try {
-
     Object.assign(ingredient, {
       units: await ingredientService.getIngredientUnits(ingredient.id) || [],
-      unit: ingredient.unit || null, // Standardwert beibehalten
+      unit: ingredient.unit || null,
     });
-
-
   } catch (error) {
     console.error('Error fetching units:', error);
   }
@@ -106,7 +80,6 @@ const fetchUnits = async (ingredient) => {
 onMounted(fetchIngredients);
 
 watch(() => props.ingredients, (newIngredients) => {
-  localIngredients.value = [...newIngredients]; // Erstellt eine neue Referenz, damit Vue die Änderung erkennt
+  localIngredients.value = [...newIngredients];
 }, { deep: true });
-
 </script>
